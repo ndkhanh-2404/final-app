@@ -15,6 +15,6 @@ mongoose.connect('mongodb+srv://admin:dEe81m0VBTO2H5Lt@cluster0.iq20s.mongodb.ne
 const userRouter = require('./routes/User');
 app.use('/user',userRouter);
 
-app.listen(5000,()=>{
+app.listen(process.env.PORT || 5000,()=>{
    console.log('express server started'); 
 });
